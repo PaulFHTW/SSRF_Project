@@ -24,7 +24,7 @@
             <div class="card">
                 <h2>About Me</h2>
                 <img src="images/hackerman.jpeg" style="height:200px;">
-                <p>Found zero-day in the time protocol implementation of earth v2.024, allowing kung fury to travel to the past.</p><br>
+                <p>Found zero-day in the time protocol implementation of earth v2.024, allowing kung fury to travel to the future.</p><br>
                 <p>Enjoys long walks on the beach</p>
                 
             </div>
