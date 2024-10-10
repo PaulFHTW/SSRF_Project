@@ -26,10 +26,12 @@
         <?php
             if($_SERVER['REQUEST_METHOD'] === 'POST'){
                 if($_POST['uname'] === "admin" && $_POST['pwd'] === "admin"){
-                    setcookie("admincookie", 0);
+                    setcookie("admincookie",0);
+                    header('Location: index.php');
                 }   
                 elseif($_POST['uname'] === "user" && $_POST['pwd'] === "user") {
-                    setcookie("usercookie", 1);
+                    setcookie("usercookie",1);
+                    header('Location: index.php');
                 }
             }
         ?>
