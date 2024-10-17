@@ -24,22 +24,10 @@
 
         <?php
             if($_SERVER['REQUEST_METHOD'] === 'POST'){
-                $url = $_POST['url'];
-                $name = $_POST['name'];
-                $email = $_POST['email'];
-
-                // create a new cURL resource
-                $ch = curl_init();
-
-                // set URL and other appropriate options
-                curl_setopt($ch, CURLOPT_URL, $url);
-                curl_setopt($ch, CURLOPT_HEADER, 0);
-
-                // grab URL and pass it to the browser
-                curl_exec($ch);
-
-                // close cURL resource, and free up system resources
-                curl_close($ch);
+                //to fix this SSRF issue sanitize the user supplied value
+                $url = $_POST['url'];  
+                $content = file_get_contents($url);  
+                echo $content; 
             }
         ?> 
 
